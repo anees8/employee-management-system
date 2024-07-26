@@ -1,28 +1,34 @@
-#Employee Management
-#Overview
-The Employee Management system allows you to manage employee data efficiently. You can add, edit, delete, import, and export employee records using this application.
+# Employee Management
 
-#Getting Started
-#Prerequisites
+The Employee Management system allows you to efficiently manage employee data. You can add, edit, delete, import, and export employee records using this application.
+
+## Getting Started
+
+### Prerequisites
 
 Ensure you have the following installed:
 
-PHP
-Composer
-Laravel
+- PHP
+- Composer
+- Laravel
 
-Installation
-1. Clone the Repository
-    Clone the repository using Git: git clone [REPOSITORY_URL]
+### Installation
 
-2. Install Dependencies
+1. **Clone the Repository**
+
+   Clone the repository using Git:
+   ```bash
+   git clone [REPOSITORY_URL]
+
+
+2. **Install Dependencies**
     Navigate to the project directory and install the necessary PHP dependencies:
         cd [PROJECT_DIRECTORY] 
         composer install
     Generate the Laravel application key:
         php artisan key:generate
 
-3. Configure the Environment
+3. **Configure the Environment**
         cp .env.example .env
     Edit the .env file to set up your database configuration:
         DB_CONNECTION=mysql
@@ -32,21 +38,21 @@ Installation
         DB_USERNAME=your_database_user
         DB_PASSWORD=your_database_password
 
-4. Run Migrations
+4. **Run Migrations**
     Set up the database schema by running:
         php artisan migrate
 
-5. Seed the Database
+5. **Seed the Database**
     Populate the database with initial data:
         php artisan db:seed
 
-Accessing the Application
-    Login Credentials
+**Accessing the Application**
+   **Login Credentials**
     To access the application, use the following credentials:
         Email: admin@example.com
         Password: admin
 
-Features
+**Features**
 The application supports the following features:
 
 Add Employee: Create new employee records.
@@ -55,7 +61,7 @@ Delete Employee: Remove employee records.
 Import Employees: Import employee data from files.
 Export Employees: Export employee data to different formats.
 
-Troubleshooting
+**Troubleshooting**
 If you encounter issues:
 
 Verify that your environment variables are correctly set.
