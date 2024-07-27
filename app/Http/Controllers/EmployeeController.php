@@ -134,4 +134,36 @@ class EmployeeController extends Controller
 
         return redirect()->back()->with('success', 'Employees imported successfully.');
     }
+    // API Endpoints
+
+    public function fetchEmployee(Request $request)
+    {
+        $query = Employee::query();
+        
+        if ($request->has('register_number')) {
+            $query->where('employee_register_number', $request->query('register_number'));
+        }
+
+        if ($request->has('contact_number')) {
+            $query->where('contact_number', $request->query('contact_number'));
+        }
+
+        if ($request->has('email')) {
+            $query->where('email', $request->query('email'));
+        }
+
+        $employee = $query->first();
+
+        if ($employee) {
+            return response()->json($employee);
+        } else {
+            return response()->json(['message' => 'Employee not found'], 404);
+        }
+    }
+
+    public function fetchAllEmployees()
+    {
+        $employees = Employee::all();
+        return response()->json($employees);
+    }
 }
