@@ -61,6 +61,30 @@ Delete Employee: Remove employee records.
 Import Employees: Import employee data from files.
 Export Employees: Export employee data to different formats.
 
+# API Endpoints
+1. Fetch a Single Employee Record
+    Endpoint: /api/employees
+    Method: GET
+    Query Parameters:
+    register_number (optional): Employee register number to fetch the specific record.
+    contact_number (optional): Contact number to fetch the specific record.
+    email (optional): Email address to fetch the specific record.
+    Description: Fetch a single employee record based on the provided register number, contact number, or email address. At least one of these parameters must be provided.
+    Response:
+    Success (200 OK): Returns the employee record.
+    Error (404 Not Found): If no employee is found with the provided parameters.
+    
+    GET /api/employees?register_number=EMP001
+
+2. Fetch All Employee Records
+    Endpoint: /api/employees/all
+    Method: GET
+    Description: Fetch a list of all employee records.
+    Response:
+    Success (200 OK): Returns a list of all employee records.
+
+    GET /api/employees/all
+
 **Troubleshooting**
 If you encounter issues:
 
